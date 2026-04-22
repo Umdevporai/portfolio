@@ -220,7 +220,8 @@ function prevGallerySlide() {
 }
 
 function updateGalleryPosition() {
-    const slideWidth = 420; // 400px width + 20px padding
+    const allSlides = galleryTrack.querySelectorAll('.gallery-slide');
+    const slideWidth = allSlides[0] ? allSlides[0].offsetWidth : 420;
     galleryTrack.style.transform = `translateX(-${currentGalleryIndex * slideWidth}px)`;
 }
 
