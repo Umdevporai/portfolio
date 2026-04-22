@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="João Vinícius Pereira - Especialista en Riego, Viticultura y Desarrollador de Software | Disponible para trabajar en España – Lleida">
+    <title>João Vinícius Pereira | Especialista en Riego & Viticultura – España</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>João Vinícius</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" data-pt="Início" data-es="Inicio">Início</a></li>
+                <li><a href="#about" data-pt="Sobre" data-es="Acerca">Sobre</a></li>
+                <li><a href="#agriculture" data-pt="Agricultura" data-es="Agricultura">Agricultura</a></li>
+                <li><a href="#software" data-pt="Software" data-es="Software">Software</a></li>
+                <li><a href="#certificates" data-pt="Certificados" data-es="Certificados">Certificados</a></li>
+                <li><a href="#gallery" data-pt="Galeria" data-es="Galería">Galeria</a></li>
+                <li><a href="#contact" data-pt="Contato" data-es="Contacto">Contato</a></li>
+            </ul>
+            <div class="theme-language-toggle">
+                <button id="theme-btn" onclick="toggleTheme()" class="theme-btn" title="Alternar tema">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button id="lang-btn" onclick="toggleLanguage()" class="lang-btn" title="Cambiar idioma / Mudar idioma">
+                    <i class="fas fa-globe"></i> <span id="current-lang">PT</span>
+                </button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-header">
+                    <div class="hero-photo">
+                        <img src="img/eu.jpeg" alt="João Vinícius Pereira">
+                    </div>
+                    <div class="hero-text">
+                        <span class="hero-greeting" data-pt="Olá, eu sou" data-es="Hola, soy">Olá, eu sou</span>
+                        <h1 class="hero-name">João Vinícius Pereira</h1>
+                        <h2 class="hero-title" data-pt="Especialista em Irrigação & Viticultura" data-es="Especialista en Riego & Viticultura">
+                            Especialista em Irrigação & Sistemas para Viticultura
+                        </h2>
+                        <p class="hero-subtitle" data-pt="Desenvolvedor de Software | Técnico em Fertirrigação e Pulverização | Agricultura 4.0" data-es="Desarrollador de Software | Técnico en Fertirrigación y Pulverización | Agricultura 4.0">
+                            Desenvolver de Software | Técnico em Irrigação, Fertirrigação e Preparo de Caldas
+                        </p>
+                    </div>
+                </div>
+
+                <div class="availability-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span data-pt="Disponível para trabalhar na Espanha – Lleida" data-es="Disponible para trabajar en España – Lleida">Disponible para trabajar en España – Lleida</span>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-pt="Entre em Contato" data-es="Contactar">Entre em Contato</span>
+                    </a>
+                    <a href="#software" class="btn btn-secondary">
+                        <i class="fas fa-code"></i>
+                        <span data-pt="Ver Projetos" data-es="Ver Proyectos">Ver Projetos</span>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p data-pt="Anos de Experiência" data-es="Años de Experiencia">Anos de Experiência</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p data-pt="Hectares Gerenciados" data-es="Hectáreas Gestionadas">Hectares Gerenciados</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4</h3>
+                        <p data-pt="Sistemas Desenvolvidos" data-es="Sistemas Desarrollados">Sistemas Desenvolvidos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-pt="Sobre Mim" data-es="Acerca de Mí">Sobre Mim</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead" data-pt="Profissional multidisciplinar com experiência técnica em viticultura e desenvolvimento de software." data-es="Profesional multidisciplinar con experiencia técnica en viticultura y desarrollo de software.">
+                        Profissional multidisciplinar com experiência técnica em viticultura e desenvolvimento de software.
+                    </p>
+                    <p data-pt="Sou encarregado de irrigação com especialização em viticultura, com profundo conhecimento em sistemas radiculares, fertirrigação e produtos do Grupo SAS (Coda e Krystal). Trabalho diretamente com importação e aplicação de bioestimulantes, nutrientes vegetais e preparo de caldas para pulverização." data-es="Soy encargado de riego con especialización en viticultura, con profundo conocimiento en sistemas radiculares, fertirrigación y productos del Grupo SAS (Coda y Krystal). Trabajo directamente con importación y aplicación de bioestimulantes, nutrientes vegetales y preparación de caldos para pulverización.">
+                        Sou encarregado de irrigação com especialização em viticultura, com profundo conhecimento em sistemas radiculares, fertirrigação e produtos do Grupo SAS (Coda e Krystal). Trabalho diretamente com importação e aplicação de bioestimulantes, nutrientes vegetais e preparo de caldas para pulverização.
+                    </p>
+                    <p data-pt="Como desenvolvedor de software, criei sistemas completos de gestão para a Fazenda Dami, transformando processos manuais em soluções digitais que economizam centenas de horas por mês e eliminaram erros operacionais." data-es="Como desarrollador de software, creé sistemas completos de gestión para la Fazenda Dami, transformando procesos manuales en soluciones digitales que ahorran cientos de horas al mes y eliminaron errores operativos.">
+                        Como desenvolvedor de software, criei sistemas completos de gestão para a Fazenda Dami, transformando processos manuais em soluções digitais que economizam centenas de horas por mês e eliminaram erros operacionais.
+                    </p>
+                    
+                    <div class="quick-facts">
+                        <h3 data-pt="Áreas de Atuação" data-es="Áreas de Actuación">Áreas de Atuação</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> <span data-pt="Gestão de Irrigação em Viticultura" data-es="Gestión de Riego en Viticultura">Gestão de Irrigação em Viticultura</span></li>
+                            <li><i class="fas fa-check"></i> <span data-pt="Fertirrigação e Nutrição Vegetal" data-es="Fertirrigación y Nutrición Vegetal">Fertirrigação e Nutrição Vegetal</span></li>
+                            <li><i class="fas fa-check"></i> <span data-pt="Preparo de Caldas para Pulverização" data-es="Preparación de Caldos para Pulverización">Preparo de Caldas para Pulverização</span></li>
+                            <li><i class="fas fa-check"></i> <span data-pt="Sistemas Radiculares e Fisiologia" data-es="Sistemas Radiculares y Fisiología">Sistemas Radiculares e Fisiologia</span></li>
+                            <li><i class="fas fa-check"></i> <span data-pt="Produtos Grupo SAS (Coda/Krystal)" data-es="Productos Grupo SAS (Coda/Krystal)">Produtos Grupo SAS (Coda/Krystal)</span></li>
+                            <li><i class="fas fa-check"></i> <span data-pt="Desenvolvimento de Sistemas Web" data-es="Desarrollo de Sistemas Web">Desenvolvimento de Sistemas Web</span></li>
+                            <li><i class="fas fa-check"></i> <span data-pt="Automação de Processos Agrícolas" data-es="Automatización de Procesos Agrícolas">Automação de Processos Agrícolas</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agriculture Experience Section -->
+    <section id="agriculture" class="agriculture">
+        <div class="container">
+            <h2 class="section-title" data-pt="Experiência em Agricultura" data-es="Experiencia en Agricultura">Experiência em Agricultura</h2>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 data-pt="Encarregado de Irrigação" data-es="Encargado de Riego">Encarregado de Irrigação</h3>
+                    <p data-pt="Responsável pelo gerenciamento completo de sistemas de irrigação em grandes áreas de viticultura, com controle preciso de dosagem e temporização." data-es="Responsable de la gestión completa de sistemas de riego en grandes áreas de viticultura, con control preciso de dosificación y temporización.">
+                        Responsável pelo gerenciamento completo de sistemas de irrigação em grandes áreas de viticultura, com controle preciso de dosagem e temporização.
+                    </p>
+                    <ul>
+                        <li data-pt="Gestão de irrigação por hectare" data-es="Gestión de riego por hectárea">Gestão de irrigação por hectare</li>
+                        <li data-pt="Monitoramento de umidade do solo" data-es="Monitoreo de humedad del suelo">Monitoramento de umidade do solo</li>
+                        <li data-pt="Otimização de consumo hídrico" data-es="Optimización de consumo hídrico">Otimização de consumo hídrico</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card">
+                    <div class="card-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 data-pt="Fertirrigação e Pulverização" data-es="Fertirrigación y Pulverización">Fertirrigação e Pulverização</h3>
+                    <p data-pt="Domínio completo da linha de produtos Coda e Krystal do Grupo SAS, com aplicação prática de bioestimulantes, nutrição vegetal de precisão e preparo de caldas para pulverização." data-es="Dominio completo de la línea de productos Coda y Krystal del Grupo SAS, con aplicación práctica de bioestimulantes, nutrición vegetal de precisión y preparación de caldos para pulverización.">
+                        Domínio completo da linha de produtos Coda e Krystal do Grupo SAS, com aplicação prática de bioestimulantes, nutrição vegetal de precisão e preparo de caldas para pulverização.
+                    </p>
+                    <ul>
+                        <li data-pt="Dosagem de adubos por hectare" data-es="Dosificación de abonos por hectárea">Dosagem de adubos por hectare</li>
+                        <li data-pt="Preparo de caldas para pulverização" data-es="Preparación de caldos para pulverización">Preparo de caldas para pulverização</li>
+                        <li data-pt="Aplicação de bioestimulantes" data-es="Aplicación de bioestimulantes">Aplicação de bioestimulantes</li>
+                        <li data-pt="Nutrição vegetal balanceada" data-es="Nutrición vegetal balanceada">Nutrição vegetal balanceada</li>
+                    </ul>
+                </div>
+
+                <div class="experience-card highlight">
+                    <div class="card-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 data-pt="Experiência com Grupo SAS" data-es="Experiencia con Grupo SAS">Experiência com Grupo SAS</h3>
+                    <p data-pt="Usuário ativo e experiente dos produtos Coda e Krystal, com importação direta da Espanha e aplicação em larga escala." data-es="Usuario activo y experimentado de los productos Coda y Krystal, con importación directa de España y aplicación a gran escala.">
+                        Usuário ativo e experiente dos produtos Coda e Krystal, com importação direta da Espanha e aplicação em larga escala.
+                    </p>
+                    <div class="products-used">
+                        <span class="badge">Coda Micro</span>
+                        <span class="badge">Coda Start</span>
+                        <span class="badge">Coda Engorde</span>
+                        <span class="badge">Krystal</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software in Action Section -->
+    <section id="software" class="software">
+        <div class="container">
+            <h2 class="section-title" data-pt="Software em Ação" data-es="Software en Acción">Software em Ação</h2>
+            <p class="section-subtitle" data-pt="Sistemas que criei e opero diariamente na Fazenda Dami Cappellaro — do campo ao digital" data-es="Sistemas que creé y opero diariamente en la Fazenda Dami Cappellaro — del campo a lo digital">
+                Sistemas que criei e opero diariamente na Fazenda Dami Cappellaro — do campo ao digital
+            </p>
+
+            <!-- Showcase: Screenshots + Map side by side -->
+            <div class="showcase-layout">
+                <!-- Left: App Screenshots -->
+                <div class="showcase-screens">
+                    <div class="showcase-tabs">
+                        <button class="showcase-tab active" onclick="switchShowcase('desktop')">
+                            <i class="fas fa-desktop"></i> Desktop
+                        </button>
+                        <button class="showcase-tab" onclick="switchShowcase('mobile')">
+                            <i class="fas fa-mobile-alt"></i> Mobile
+                        </button>
+                    </div>
+
+                    <!-- Desktop Screenshots -->
+                    <div class="showcase-panel active" id="panel-desktop">
+                        <div class="screens-column">
+                            <div class="screen-card">
+                                <img src="img/app.jpeg" alt="Portal Dami System">
+                                <div class="screen-label">Portal Dami System</div>
+                            </div>
+                            <div class="screen-card">
+                                <img src="img/app1.jpeg" alt="Estoque Caldeira Dami">
+                                <div class="screen-label">Estoque Caldeira</div>
+                            </div>
+                            <div class="screen-card">
+                                <img src="img/app2.jpeg" alt="Controle por Área">
+                                <div class="screen-label">Controle por Área</div>
+                            </div>
+                            <div class="screen-card">
+                                <img src="img/app3.jpeg" alt="Sistema de Apontamentos">
+                                <div class="screen-label">Apontamentos</div>
+                            </div>
+                            <div class="screen-card">
+                                <img src="img/app4.jpeg" alt="Estoque Packhouse">
+                                <div class="screen-label">Estoque Packhouse</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Screenshots -->
+                    <div class="showcase-panel" id="panel-mobile">
+                        <div class="screens-column">
+                            <div class="screen-card">
+                                <img src="img/1.jpeg" alt="Atualização Visual Mobile">
+                                <div class="screen-label">Abas do Sistema Mobile</div>
+                            </div>
+                            <div class="screen-card">
+                                <img src="img/2.jpeg" alt="Menu Lateral Mobile">
+                                <div class="screen-label">Menu de Navegação</div>
+                            </div>
+                            <div class="screen-card">
+                                <img src="img/3.jpeg" alt="Antes vs Depois">
+                                <div class="screen-label">Antes vs Depois</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Map + Info -->
+                <div class="showcase-location">
+                    <div class="location-header">
+                        <div class="location-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h3>Fazenda Dami Cappellaro</h3>
+                            <p class="location-region">Petrolina - PE, Brasil</p>
+                        </div>
+                    </div>
+                    <div class="location-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3737.4035101899763!2d-40.4166587!3d-9.3024975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x77363c815818421%3A0xb30e5fe5d5cecca5!2sFazenda%20Dami%20Cappellaro!5e1!3m2!1spt-BR!2sbr!4v1774881081085!5m2!1spt-BR!2sbr" width="100%" height="280" style="border:0;border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="location-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-wine-bottle"></i>
+                            <span data-pt="Viticultura de exportação" data-es="Viticultura de exportación">Viticultura de exportação</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <span data-pt="4 sistemas em produção" data-es="4 sistemas en producción">4 sistemas em produção</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-users"></i>
+                            <span data-pt="Usado por toda a equipe" data-es="Utilizado por todo el equipo">Usado por toda a equipe</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-tint"></i>
+                            <span data-pt="100+ hectares irrigados" data-es="100+ hectáreas irrigadas">100+ hectares irrigados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Impact Stats -->
+            <div class="impact-stats">
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-clock"></i></div>
+                    <div class="impact-value">95%</div>
+                    <div class="impact-label" data-pt="Redução de Tempo" data-es="Reducción de Tiempo">Redução de Tempo</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-check-circle"></i></div>
+                    <div class="impact-value">100%</div>
+                    <div class="impact-label" data-pt="Precisão nos Cálculos" data-es="Precisión en Cálculos">Precisão nos Cálculos</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-file-alt"></i></div>
+                    <div class="impact-value">90%</div>
+                    <div class="impact-label" data-pt="Economia de Papel" data-es="Ahorro de Papel">Economia de Papel</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon"><i class="fas fa-hourglass-half"></i></div>
+                    <div class="impact-value">20h+</div>
+                    <div class="impact-label" data-pt="Horas/Mês Economizadas" data-es="Horas/Mes Ahorradas">Horas/Mês Economizadas</div>
+                </div>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack">
+                <h3 data-pt="Stack Tecnológico" data-es="Stack Tecnológico">Stack Tecnológico</h3>
+                <div class="tech-icons">
+                    <div class="tech-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-database"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="fas fa-server"></i>
+                        <span>Express</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title" data-pt="Certificados e Qualificações" data-es="Certificados y Cualificaciones">Certificados e Qualificações</h2>
+            
+            <div class="certificates-slider">
+                <button class="slider-btn prev-btn" onclick="prevCertificate()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="certificates-viewport">
+                <div class="certificates-track">
+                    <div class="certificate-slide">
+                        <div class="certificate-card">
+                            <div class="cert-preview">
+                                <img src="img/certificado1.jpeg" alt="Certificado Web Design Express">
+                            </div>
+                            <div class="cert-info">
+                                <h3>Web Design Express</h3>
+                                <p class="cert-institution">Danki Code</p>
+                                <p class="cert-hours">13 horas</p>
+                                <p class="cert-date">16/10/2023</p>
+                                <a href="pdfs/cert-webdesign.pdf" download class="btn btn-download">
+                                    <i class="fas fa-download"></i> Baixar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-slide">
+                        <div class="certificate-card">
+                            <div class="cert-preview">
+                                <img src="img/certificado2.jpeg" alt="Certificado Design para Web">
+                            </div>
+                            <div class="cert-info">
+                                <h3>Design para Web</h3>
+                                <p class="cert-institution">Danki Code</p>
+                                <p class="cert-hours">7 horas</p>
+                                <p class="cert-date">16/10/2023</p>
+                                <a href="pdfs/cert-designweb.pdf" download class="btn btn-download">
+                                    <i class="fas fa-download"></i> Baixar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-slide">
+                        <div class="certificate-card">
+                            <div class="cert-preview">
+                                <img src="img/certificado3.jpeg" alt="Certificado Front-End Completo">
+                            </div>
+                            <div class="cert-info">
+                                <h3>Front-End Completo 2.0</h3>
+                                <p class="cert-institution">Danki Code</p>
+                                <p class="cert-hours">9 horas</p>
+                                <p class="cert-date">17/10/2023</p>
+                                <a href="pdfs/cert-frontend.pdf" download class="btn btn-download">
+                                    <i class="fas fa-download"></i> Baixar PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-slide">
+                        <div class="certificate-card">
+                            <div class="cert-preview">
+                                <img src="img/irri.jpeg" alt="Certificado Irrigação em Viticultura" class="cert-img-contain">
+                            </div>
+                            <div class="cert-info">
+                                <h3>Irrigação em Viticultura</h3>
+                                <p class="cert-institution">Fisiologia Da Irrigação</p>
+                                <p class="cert-hours">8 Horas</p>
+                                <p class="cert-date">19/11/2025</p>
+                                <span class="btn btn-download disabled">
+                                    <i class="fas fa-clock"></i> Em Digitalização
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                
+                <button class="slider-btn next-btn" onclick="nextCertificate()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <div class="slider-dots" id="cert-dots"></div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title" data-pt="Galeria de Trabalho" data-es="Galería de Trabajo">Galeria de Trabalho</h2>
+            <p class="section-subtitle" data-pt="Documentação fotográfica do trabalho com produtos Coda/SAS e sistemas de irrigação" data-es="Documentación fotográfica del trabajo con productos Coda/SAS y sistemas de riego">
+                Documentação fotográfica do trabalho com produtos Coda/SAS e sistemas de irrigação
+            </p>
+
+            <div class="gallery-slider">
+                <div class="gallery-track" id="gallery-track">
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/a1.jpeg" alt="Campo de Trabajo">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/a2.jpeg" alt="Viticultura en Campo">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/a3.jpeg" alt="Riego en Acción">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/mapa.jpeg" alt="Mapa de fazenda">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/b1.jpeg" alt="Campo de Trabajo">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/b2.jpeg" alt="Viticultura en Campo">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/b3.jpeg" alt="Riego en Acción">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/b4.jpeg" alt="Mapa de fazenda">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-1.jpeg" alt="Trabalho na Fazenda">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-2.jpeg" alt="Sistema de Irrigação">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-3.jpeg" alt="Parreiras de Uva">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-4.jpeg" alt="Aplicação de Nutrientes">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-5.jpeg" alt="Trabalho em Campo">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-6.jpeg" alt="Cultivo de Uvas">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-7.jpeg" alt="Equipamentos">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-8.jpeg" alt="Fertirrigação">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-9.jpeg" alt="Manejo de Irrigação">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-10.jpeg" alt="Produtos Agrícolas">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-11.jpeg" alt="Sistemas de Cultivo">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-12.jpeg" alt="Agricultura de Precisão">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-13.jpeg" alt="Campo de Cultivo">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-14.jpeg" alt="Monitoramento">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-15.jpeg" alt="Viticultura">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-16.jpeg" alt="Irrigação Técnica">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-18.jpeg" alt="Trabalho Diário">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-19.jpeg" alt="Fazenda Dami">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-20.jpeg" alt="Agricultura 4.0">
+                        </div>
+                    </div>
+                    <div class="gallery-slide">
+                        <div class="gallery-item">
+                            <img src="img/trabalho-21.jpeg" alt="Tecnologia Agrícola">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-controls">
+                <button class="gallery-btn" onclick="prevGallerySlide()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="gallery-btn" onclick="pauseGallery()">
+                    <i class="fas fa-pause" id="gallery-pause-icon"></i>
+                </button>
+                <button class="gallery-btn" onclick="nextGallerySlide()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-pt="Entre em Contato" data-es="Contacto">Entre em Contato</h2>
+            <p class="section-subtitle" data-pt="Disponível para oportunidades na Espanha em agricultura e desenvolvimento de software" data-es="Disponible para oportunidades en España en agricultura y desarrollo de software">
+                Disponível para oportunidades na Espanha em agricultura e desenvolvimento de software
+            </p>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:joaoo55@outlook.com.br">joaoo55@outlook.com.br</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/seu-perfil" target="_blank">linkedin.com/in/joao-vinicius</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-instagram"></i>
+                        <div>
+                            <h4>Instagram</h4>
+                            <a href="https://instagram.com/vinizx24_" target="_blank">@vinizx24_</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/5587992026551" target="_blank">+55 (87) 99202-6551</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/seu-usuario" target="_blank">github.com/joao-vinicius</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <h3 data-pt="Pronto para uma nova jornada" data-es="Listo para un nuevo viaje">Pronto para uma nova jornada</h3>
+                    <p data-pt="Com experiência técnica em viticultura e desenvolvimento de software, estou buscando oportunidades na Espanha, especialmente nas regiões de Valladolid, Lérida e outras áreas vinícolas." data-es="Con experiencia técnica en viticultura y desarrollo de software, busco oportunidades en España, especialmente en las regiones de Valladolid, Lérida y otras áreas vinícolas.">
+                        Com experiência técnica em viticultura e desenvolvimento de software, estou buscando oportunidades na Espanha, especialmente nas regiões de Valladolid, Lérida e outras áreas vinícolas.
+                    </p>
+                    <div class="cta-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-pt="Disponível para mudança imediata" data-es="Disponible para cambio inmediato">Disponível para mudança imediata</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-pt="Experiência com Grupo SAS (Coda)" data-es="Experiencia con Grupo SAS (Coda)">Experiência com Grupo SAS (Coda)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span data-pt="Desenvolvedor de sistemas agrícolas" data-es="Desarrollador de sistemas agrícolas">Desenvolvedor de sistemas agrícolas</span>
+                        </div>
+                    </div>
+
+                    <p class="incorporation-text">
+                        <i class="fas fa-calendar-check"></i>
+                        <span data-pt="Disponível para contratação imediata" data-es="Disponible para incorporación inmediata">Disponible para incorporación inmediata</span>
+                    </p>
+
+                    <div class="contact-actions">
+                        <a href="https://wa.me/5587992026551?text=Hola%20Jo%C3%A3o%2C%20vi%20tu%20portafolio%20y%20me%20interesa%20contactarte"
+                           target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-pt="WhatsApp Direto" data-es="WhatsApp Directo">WhatsApp Directo</span>
+                        </a>
+                        <a href="mailto:joaoo55@outlook.com.br" class="btn btn-email">
+                            <i class="fas fa-envelope"></i>
+                            <span data-pt="Enviar Email" data-es="Enviar Email">Enviar Email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 João Vinícius Pereira - <span data-pt="Todos os direitos reservados" data-es="Todos los derechos reservados">Todos os direitos reservados</span></p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/seu-perfil" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/seu-usuario" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/5587992026551" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav lightbox-prev" onclick="lightboxNav(-1, event)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-label" id="lightbox-label"></div>
+        </div>
+        <button class="lightbox-nav lightbox-next" onclick="lightboxNav(1, event)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+</body>
+</html>
