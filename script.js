@@ -7,8 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', currentTheme);
     updateThemeIcon();
     updateLanguage();
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('error', () => {
+            img.style.display = 'none';
+        });
+    });
     const langBtn = document.getElementById('current-lang');
-    if (langBtn) langBtn.textContent = currentLanguage === 'es' ? 'PT' : 'ES';
+    if (langBtn) langBtn.textContent = currentLanguage === 'es' ? 'BR' : 'ES';
     initCertificateSlider();
     initGallerySlider();
     initShowcaseCarousels();
@@ -45,14 +50,82 @@ function updateThemeIcon() {
 function toggleLanguage() {
     currentLanguage = currentLanguage === 'pt' ? 'es' : 'pt';
     updateLanguage();
-    document.getElementById('current-lang').textContent = currentLanguage === 'es' ? 'PT' : 'ES';
+    document.getElementById('current-lang').textContent = currentLanguage === 'es' ? 'BR' : 'ES';
 }
 
 function updateLanguage() {
+    document.documentElement.lang = currentLanguage === 'es' ? 'es-ES' : 'pt-BR';
     const elements = document.querySelectorAll('[data-pt][data-es]');
     elements.forEach(element => {
         const text = element.getAttribute(`data-${currentLanguage}`);
         if (text) element.textContent = text;
+    });
+    translateStaticText(currentLanguage);
+}
+
+const languagePairs = [
+    ['Inicio', 'Início'],
+    ['Sobre mí', 'Sobre mim'],
+    ['Desarrollo', 'Desenvolvimento'],
+    ['Formación', 'Formação'],
+    ['Proyectos', 'Projetos'],
+    ['Contacto', 'Contato'],
+    ['Hola, soy', 'Olá, eu sou'],
+    ['Muebles a medida y desarrollo web', 'Móveis planejados e desenvolvimento web'],
+    ['Experiencia práctica | Precisión | Tecnología aplicada al trabajo', 'Experiência prática | Precisão | Tecnologia aplicada ao trabalho'],
+    ['Disponible para trabajar en Valencia y Madrid', 'Disponível para trabalhar em Valencia e Madrid'],
+    ['Contactar', 'Entre em contato'],
+    ['Ver proyectos', 'Ver projetos'],
+    ['Años de experiencia', 'Anos de experiência'],
+    ['Años de edad', 'Anos de idade'],
+    ['Áreas de trabajo', 'Áreas de atuação'],
+    ['Sobre mí', 'Sobre mim'],
+    ['Tengo 26 años, soy del norte de Brasil y vengo de una familia humilde. Soy una persona dedicada y trabajadora; creo que un trabajo bien hecho nace de la responsabilidad, la atención a los detalles y las ganas de aprender cada día.', 'Tenho 26 anos, sou do Norte do Brasil e venho de uma família humilde. Sou dedicado e esforçado; acredito que um trabalho bem feito nasce da responsabilidade, da atenção aos detalhes e da vontade de aprender todos os dias.'],
+    ['Cuento con 10 años de experiencia profesional en muebles a medida y carpintería. He trabajado con máquinas CNC router y con canteadora automática, siempre buscando precisión, buenos acabados, productividad y cuidado en cada etapa del trabajo.', 'Tenho 10 anos de experiência profissional com móveis planejados e marcenaria. Tenho experiência com máquinas CNC router e coladeira de borda automática, sempre buscando precisão, bom acabamento, produtividade e cuidado em cada etapa do trabalho.'],
+    ['Aprendo con facilidad nuevos procesos, máquinas y herramientas. También soy desarrollador de software y puedo aportar sistemas, organización de la información y soluciones digitales para mejorar el día a día de la empresa.', 'Tenho facilidade para aprender novos processos, máquinas e ferramentas. Também sou desenvolvedor de software e posso contribuir com sistemas, organização de informações e soluções digitais para melhorar a rotina da empresa.'],
+    ['Mi nivel de español es intermedio y entiendo bien el español hablado. Mi profesora de idiomas es natural de Cataluña, algo que me ha ayudado mucho a mejorar la comprensión del idioma y a familiarizarme con sus diferentes pronunciaciones y expresiones.', 'Falo espanhol em nível intermediário e entendo bem o espanhol falado. Minha professora de línguas é natural da Catalunha, o que tem me ajudado a desenvolver a compreensão do idioma e conhecer melhor as diferenças de pronúncia e vocabulário.'],
+    ['Ya tengo preparados mis documentos y certificados de antecedentes. Llevo tiempo planificando mi traslado al extranjero con mi esposa y mi hijo. Mi idea es viajar primero para estabilizarme profesionalmente y, más adelante, reunirme con mi familia.', 'Já estou com meus documentos e antecedentes preparados. Venho me planejando para imigrar com minha esposa e meu filho. Minha intenção é ir primeiro para me estabilizar profissionalmente e, depois, trazer minha família para junto de mim.'],
+    ['Lo que puedo aportar', 'O que posso oferecer'],
+    ['Habilidades profesionales', 'Habilidades profissionais'],
+    ['Muebles a medida', 'Móveis planejados'],
+    ['Maquinaria y producción', 'Máquinas e produção'],
+    ['Tecnología', 'Tecnologia'],
+    ['Desarrollo de software', 'Desenvolvimento de software'],
+    ['Competencias técnicas', 'Competências técnicas'],
+    ['Creo soluciones web para organizar información, automatizar tareas y mejorar los procesos de trabajo.', 'Crio soluções web para organizar informações, automatizar tarefas e melhorar os processos de trabalho.'],
+    ['También tengo experiencia con distintos programas de diseño 3D para muebles. Sé desarrollar proyectos en 3D, preparar renders profesionales y buscar optimizaciones que mejoren la producción, el aprovechamiento de los materiales y el resultado final.', 'Também tenho experiência com diferentes softwares de design 3D para móveis. Sei desenvolver projetos em 3D, preparar renders profissionais e buscar otimizações que melhorem a produção, o aproveitamento dos materiais e o resultado final.'],
+    ['Sé leer y comprender proyectos arquitectónicos y estoy dispuesto a aprender los métodos y la forma de trabajar que se utilizan en España.', 'Sei ler e compreender projetos arquitetônicos e estou disposto a aprender os métodos e a forma de trabalho utilizados na Espanha.'],
+    ['También he sido líder de equipo en una tienda de muebles, coordinando tareas, apoyando a mis compañeros y ayudando a mantener la organización y la calidad del trabajo.', 'Também já fui líder de equipe em uma loja de móveis, coordenando tarefas, apoiando meus colegas e ajudando a manter a organização e a qualidade do trabalho.'],
+    ['Proyectos de muebles a medida', 'Projetos de móveis planejados'],
+    ['Añade nuevas fotos a la carpeta', 'Adicione novas fotos na pasta'],
+    ['Para añadir una foto: copia este bloque y cambia el nombre del archivo y el texto alternativo.', 'Para adicionar uma foto: copie este bloco e troque o nome do arquivo e o texto alternativo.'],
+    ['Contacto', 'Contato'],
+    ['Disponible para oportunidades en empresas de muebles a medida en Valencia y Madrid.', 'Disponível para oportunidades em empresas de móveis planejados em Valencia e Madrid.'],
+    ['Listo para una nueva oportunidad', 'Pronto para uma nova oportunidade'],
+    ['Busco un equipo en el que pueda aportar experiencia, dedicación, esfuerzo y ganas de crecer. También tengo disponibilidad para ayudar con tareas adicionales según las necesidades de la empresa.', 'Busco uma equipe em que eu possa contribuir com experiência, dedicação, esforço e vontade de crescer. Também tenho disponibilidade para ajudar em tarefas extras conforme a demanda da empresa.'],
+    ['Documentación preparada', 'Documentos preparados'],
+    ['Antecedentes listos', 'Antecedentes prontos'],
+    ['Disponibilidad para trasladarme', 'Disponível para mudança'],
+    ['Disponible para incorporarme', 'Disponível para contratação'],
+    ['WhatsApp directo', 'WhatsApp direto'],
+    ['Enviar correo', 'Enviar email'],
+    ['Todos los derechos reservados', 'Todos os direitos reservados'],
+    ['Cambiar tema', 'Alternar tema'],
+    ['Cambiar a portugués', 'Mudar idioma']
+];
+
+function translateStaticText(language) {
+    const translations = new Map();
+    languagePairs.forEach(([spanish, portuguese]) => {
+        translations.set(language === 'pt' ? spanish : portuguese, language === 'pt' ? portuguese : spanish);
+    });
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) textNodes.push(walker.currentNode);
+    textNodes.forEach(node => {
+        const key = node.nodeValue.trim();
+        const translated = translations.get(key);
+        if (translated) node.nodeValue = node.nodeValue.replace(key, translated);
     });
 }
 
@@ -90,14 +163,13 @@ window.addEventListener('scroll', () => {
     } else {
         navbar.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
     }
-    
-    // Hide/show navbar on scroll direction
+
     if (currentScroll > lastScroll && currentScroll > 500) {
         navbar.style.transform = 'translateY(-100%)';
     } else {
         navbar.style.transform = 'translateY(0)';
     }
-    
+
     lastScroll = currentScroll;
 });
 
